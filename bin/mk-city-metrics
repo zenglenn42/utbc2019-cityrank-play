@@ -1,0 +1,11 @@
+#!/bin/sh
+echo "// Schema Description" > city-metrics.js
+echo "// happiness:                 range [29.19 to 72.30] higher == better" >> city-metrics.js
+echo "// wellbeing:                 range [1 to 182] lower == better" >> city-metrics.js
+echo "// income_and_employment:     range [1 to 182] lower == better" >> city-metrics.js
+echo "// community_and_environment: range [1 to 182] lower == better" >> city-metrics.js
+echo "" >> city-metrics.js
+echo "let cityMetrics = [" >> city-metrics.js
+cat city-metrics.raw | egrep -v "^#" |cut -d"	" -f2- | sed -e "s/^/	\"/g" -e "s/, \([A-Z][A-Z]\)[	]\(.*\)[	]\(.*\)[	]\(.*\)[	]\(.*\)/, \1\": { \"happiness\": \2, \"wellbeing\": \3, \"income_and_employment\": \4, \"community_and_environment\": \5 },/g" >> city-metrics.js
+echo "];" >> city-metrics.js
+
