@@ -1,4 +1,4 @@
-// https://public.opendatasoft.com/api/records/1.0/search/?dataset=usa-2016-presidential-election-by-county&facet=county
+// https://public.opendatasoft.com/api/records/1.0/search/?dataset=usa-2016-presidential-election-by-county&facet=county&rows=11
 //
 // The key fields of interest for our application are:
 //
@@ -20,7 +20,8 @@
 function CountyToPolitics() {}
 CountyToPolitics.prototype.apiMethod = "GET";
 CountyToPolitics.prototype.url = "https://public.opendatasoft.com/api/records/1.0/search/";
-CountyToPolitics.prototype.params = "&facet=county";
+// CountyToPolitics.prototype.params = "&facet=county&rows=3143"; // This represents 100 MB of data :-) since it's every county in the country.
+CountyToPolitics.prototype.params = "&facet=county&rows=10";	// Limit the data during test.
 CountyToPolitics.prototype.key = "";
 CountyToPolitics.prototype.electionDataset = "usa-2016-presidential-election-by-county";
 CountyToPolitics.prototype.data = [
