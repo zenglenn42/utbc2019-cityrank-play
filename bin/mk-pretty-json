@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cat county-political.raw | python -m json.tool > county-political.js
