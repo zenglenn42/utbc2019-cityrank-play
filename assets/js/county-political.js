@@ -24,7 +24,7 @@ CountyToPolitics.prototype.url = "https://public.opendatasoft.com/api/records/1.
 CountyToPolitics.prototype.params = "&facet=county&rows=10";	// Limit the data during test.
 CountyToPolitics.prototype.key = "";
 CountyToPolitics.prototype.electionDataset = "usa-2016-presidential-election-by-county";
-CountyToPolitics.prototype.data = [
+//CountyToPolitics.prototype.data = [];
     // "Cherokee County, Alabama": {
     //     "rep16_frac": 0,
     //     "dem16_frac": 0,
@@ -40,7 +40,6 @@ CountyToPolitics.prototype.data = [
     //     "green08_frac": 0
     // },
     // ..
-];
 CountyToPolitics.prototype.rawJson = [];
 CountyToPolitics.prototype.getQueryUrl = function() {
     let results = `${this.url}?dataset=${this.electionDataset}${this.params}${this.key}`;
