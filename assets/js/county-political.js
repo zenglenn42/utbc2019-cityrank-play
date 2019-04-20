@@ -17,6 +17,7 @@
 // It looks like we get three election years worth of data, good for making
 // trending statements.
 //
+
 function CountyToPolitics() {}
 CountyToPolitics.prototype.apiMethod = "GET";
 CountyToPolitics.prototype.url = "https://public.opendatasoft.com/api/records/1.0/search/";

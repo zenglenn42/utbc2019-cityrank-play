@@ -3,8 +3,8 @@ function Controller() {
     this.cityToCounty.setCityState("Chicago IL");
 
     this.countyToPolitics = new CountyToPolitics();
-
     this.addButtonListeners();
+    console.log(this.countyToPolitics.data);
 }
 
 Controller.prototype.addButtonListeners = function() {
