@@ -36,7 +36,7 @@ CityToCounty.prototype.getCountyCallback = function(strCityState = this.cityStat
         console.log("click");
         $.ajax({
             url: queryUrl,
-            method: this.apiMethod
+            method: this.apiMethod,
         }).done(function(response) {
             // Verify we're getting reasonable data back from the endpoint.
             var nLength = (response.status == "OK") ? response.results[0].address_components.length : 0;
