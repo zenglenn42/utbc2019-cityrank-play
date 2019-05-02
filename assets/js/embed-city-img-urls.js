@@ -27,7 +27,7 @@ let cityImages = [
     {"Cedar Rapids, IA": {imgSrc: "https://upload.wikimedia.org/wikipedia/commons/1/19/Cedar_Rapids_skyline.jpg", imgAuthor: "Iowahwyman", imgLic: "(CC BY-SA 3.0)"}},
     {"Minneapolis, MN": {imgSrc: "https://upload.wikimedia.org/wikipedia/commons/8/82/MinneapolisCollage2018.jpg", imgAuthor: "RGully07", imgLic: "(CC BY-SA 4.0)"}}, 
     {"Chula Vista, CA": {imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Chula_Vista%2C_CA%2C_USA_-_panoramio_%2877%29.jpg/1200px-Chula_Vista%2C_CA%2C_USA_-_panoramio_%2877%29.jpg", imgAuthor: "Roman Eugeniusz", imgLic: "(CC BY-SA 3.0)"}},
-    {"Pembroke Pines, FL": {imgSrc: "https://upload.wikimedia.org/wikipedia/en/8/83/Pembroke_Pines_city_seal.png", imgAuthor: "", imgLic: "(CC BY-SA 3.0)"}},
+    {"Pembroke Pines, FL": {imgSrc: "assets/img/pembroke_pines_fl.jpg", imgAuthor: "", imgLic: "(CC BY-SA 3.0)"}},
     {"Honolulu, HI": {imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/HonoluluM.png/288px-HonoluluM.png", imgAuthor: "", imgLic: ""}},
     {"Des Moines, IA": {imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Des_Moines_Montage.jpg/261px-Des_Moines_Montage.jpg", imgAuthor: "Raivena", imgLic: "(CC BY 3.0)"}},
     {"Irving, TX": {imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Irving_Montage.jpg/343px-Irving_Montage.jpg", imgAuthor: "Av9", imgLic: "(Public Domain)"}},
