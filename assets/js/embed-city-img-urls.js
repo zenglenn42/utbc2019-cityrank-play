@@ -192,6 +192,23 @@ CityImages.prototype.writeImage = function(divID, index) {
     $(divID).append(`<img src=${imgSrc}>`);
 }
 
+CityImages.prototype.writeCard = function(divID, index) {
+    let cityState = Object.keys(this.data[index])[0];
+    let imgSrc = this.data[index][cityState].imgSrc;
+    $(divID).append(`
+        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div
+                class="mdl-card__title mdl-card--expand"
+                style="background: url('${imgSrc}') top/cover">
+                <h2 class="mdl-card__title-text" style="padding: 0 0.2em; border-radius: 0.2em; background-color: rgba(6,6,6,0.6)">${cityState}</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.
+            </div>
+        </div>
+    `);
+}
+
 // Replacing broken image link with default.png
 // Courtesy: https://blog.teamtreehouse.com/how-to-fix-a-broken-image
 //
@@ -206,6 +223,7 @@ CityImages.prototype.writeImage = function(divID, index) {
 function UnitTestCI(divID) {
     let ci = new CityImages();
     for (let i = 0; i < ci.data.length; i++) {
-        ci.writeImage(divID, i);
+        // ci.writeImage(divID, i);
+        ci.writeCard(divID, i);
     }
 }
