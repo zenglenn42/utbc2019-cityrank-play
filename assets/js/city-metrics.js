@@ -263,7 +263,7 @@ CityRankPics.prototype.getCityRankPicsCallback = function(cityState) {
 			let imgSrc = `${baseUrl}?key=${that.key}&photoreference=${photoRef}&maxwidth=400`;
 			console.log("imgSrc = ", imgSrc);
 			that.imgSrc = imgSrc;
-			that.writeImg(that.imgDiv, imgSrc);
+			that.writeImg(that.imgDiv, imgSrc, cityState);
 
 		}).fail(function(jqXHR, textStatus) { 
 				console.error(textStatus);
@@ -273,8 +273,9 @@ CityRankPics.prototype.getCityRankPicsCallback = function(cityState) {
     return innerCallback;
 }
 
-CityRankPics.prototype.writeImg = function(imgDiv, imgSrc) {
-	$(imgDiv).append(`<img src="${imgSrc}">`);
+CityRankPics.prototype.writeImg = function(imgDiv, imgSrc, cityState) {
+	$(imgDiv).append(`<p><img src="${imgSrc}"></p><p>url = ${imgSrc}</p><p>cityState = ${cityState}<p>`);
+	console.log(`${cityState} url = ${imgSrc}`);
 }
 
 function UnitTestCityRankPics(imgDiv) {
@@ -288,6 +289,6 @@ function UnitTestCityRankPics(imgDiv) {
 		let cityState = Object.keys(cityMetrics[key])[0];
 		let cb = crp.getCityRankPicsCallback(cityState);
 		cb();
-		if (key == 10) break; // don't tire the google :-)
+		// if (key == 10) break; // don't tire the google :-)
 	}
 }
