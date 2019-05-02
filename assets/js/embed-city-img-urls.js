@@ -203,7 +203,9 @@ CityImages.prototype.writeCard = function(divID, index) {
                 <h2 class="mdl-card__title-text" style="padding: 0 0.2em; border-radius: 0.2em; background-color: rgba(6,6,6,0.6)">${cityState}</h2>
             </div>
             <div class="mdl-card__supporting-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.
+                Civic Happiness:<br />
+                Median Home Price:<br />
+                Politics:<br />
             </div>
         </div>
     `);
