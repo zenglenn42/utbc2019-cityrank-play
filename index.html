@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -30,7 +31,124 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="unitTest"></div>
+    <header>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">CityMatch</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="page-content"><!-- Your content goes here --></div>
+      </main>
+    </div>
+
+    <!-- slider1.MaterialSlider.change(newvalue) -->
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+          <input
+          class="mdl-slider mdl-js-slider"
+          type="range"
+          min="0"
+          max="100"
+          value="25"
+          tabindex="0"
+        />
+      </div>
+      <div class="mdl-cell mdl-cell--12-col">
+          <div id="idHappiness" class="label">
+              Civic Happiness
+          </div>
+          <div class="mdl-slider__container">
+            <i class="far fa-meh fa-md pr-3" aria-hidden="true"></i>
+            <input
+              class="mdl-slider mdl-js-slider"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              tabindex="0"
+            />
+            <i class="far fa-smile fa-md pr-3" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--12-col">
+          <div id="idPolitics" class="label">
+              Political Affiliation
+          </div>
+          <div class="mdl-slider__container">
+            <i class="fas fa-democrat fa-md blue-text pr-3" aria-hidden="true"></i>
+            <input
+              class="mdl-slider mdl-js-slider"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              tabindex="0"
+            />
+            <i class="fas fa-republican fa-md red-text pr-3" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="mdl-cell mdl-cell--12-col">
+          <div id="idAffordability" class="label">
+              Affordability
+          </div>
+          <div class="mdl-slider__container">
+            <i class="fas fa-dollar-sign fa-sm pr-3" aria-hidden="true"></i>
+            <input
+              class="mdl-slider mdl-js-slider"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              tabindex="0"
+            />
+            <i class="fas fa-dollar-sign fa-sm pr-3" aria-hidden="true"></i>
+            <i class="fas fa-dollar-sign fa-sm pr-3" aria-hidden="true"></i>
+          </div>
+      </div>
+    </div>
+    <!-- <table>
+        <tr><td>Default Slider</td><td>Slider with initial value</td>
+           <td>Disabled Slider</td></tr>
+        <tr><td><input id = "slider1" class = "mdl-slider mdl-js-slider" type = "range" 
+           min = "0" max = "100" value = "0" tabindex = "0" 
+           oninput = "showMessage(this.value)" onchange = "showMessage(this.value)"></td>
+        <td><input id = "slider2" class = "mdl-slider mdl-js-slider" type = "range"  
+           min = "0" max = "100" value = "25" tabindex = "0" 
+           oninput = "showMessage(this.value)" onchange = "showMessage(this.value)"></td>
+        <td><input id = "slider3" class = "mdl-slider mdl-js-slider" type = "range"  
+           min = "0" max = "100" value = "25" tabindex = "0" step = "2" disabled 
+           oninput = "showMessage(this.value)" onchange = "showMessage(this.value)"></td>
+        </tr>
+     </table> -->
+    <div id="button-div">
+        <button id="next"
+        class="mdl-button mdl-button--fab mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">forward</i>
+        </button>
+    </div>
+    <div id="unitTest" class="city-cards">
+      
+    </div>
+    <footer class="mdl-mini-footer"></footer>
     <script type="text/javascript">
       UnitTestCI("#unitTest");
     </script>

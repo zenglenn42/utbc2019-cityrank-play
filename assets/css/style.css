@@ -10,3 +10,47 @@
     no-repeat #46b6ac;
   background-size: cover;
 }
+
+main.mdl-layout__content {
+  line-height: 1em;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+#button-div {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* div.aria-widget-slider .value { */
+.value-left {
+  width: 2em;
+  text-align: left;
+  position: absolute;
+  color: red;
+}
+
+.value-right {
+  width: 2em;
+  text-align: right;
+  position: absolute;
+  color: green;
+}
+
+div.mdl-slider__container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.blue-text {
+  color: blue;
+}
+
+.red-text {
+  color: red;
+}
+
+.city-cards,
+.demo-card-square {
+  margin: 1em auto;
+}
